@@ -1,0 +1,7 @@
+# Immediate rollback to previous version
+systemctl stop dukeai
+mv /opt/dukeai/DUKEAi-1.0.0.jar.previous /opt/dukeai/DUKEAi-1.0.0.jar
+systemctl start dukeai
+
+# Restore from backup
+./restore.sh --backup 20250101_120000

@@ -1,0 +1,47 @@
+{
+  "dashboard": {
+    "title": "DUKE QAOS-AI Dashboard",
+    "panels": [
+      {
+        "title": "System CPU Usage",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "process_cpu_seconds_total{job=\"dukeai\"}"
+          }
+        ]
+      },
+      {
+        "title": "Memory Usage",
+        "type": "gauge",
+        "targets": [
+          {
+            "expr": "jvm_memory_used_bytes{job=\"dukeai\"}"
+          }
+        ]
+      },
+      {
+        "title": "Task Processing Rate",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(quantum_tasks_total{job=\"dukeai\"}[5m])"
+          }
+        ]
+      },
+      {
+        "title": "Threat Detection Rate",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(security_threats_detected_total{job=\"dukeai\"}[5m])"
+          }
+        ]
+      }
+    ],
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    }
+  }
+}

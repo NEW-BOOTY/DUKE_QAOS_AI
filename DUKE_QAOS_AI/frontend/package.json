@@ -1,0 +1,19 @@
+{
+  "name": "duke-qaos-ai-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite --host 0.0.0.0 --port 3000"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.4.9",
+    "vite": "^4.4.9"
+  }
+}

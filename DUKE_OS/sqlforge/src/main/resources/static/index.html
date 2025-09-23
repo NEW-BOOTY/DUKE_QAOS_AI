@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SQLForge</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div id="app" class="container">
+    <header>
+      <h1>SQLForge</h1>
+      <p class="tag">Safe sandboxed SQL, NL→SQL helper, advice & explain — single page experience</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <label for="nl">Natural language / SQL</label>
+        <textarea id="nl" placeholder="Type natural language or SQL here..."></textarea>
+        <div class="controls">
+          <button id="nl2sql">Convert NL → SQL</button>
+          <button id="run">Run</button>
+          <button id="explain">Explain</button>
+          <select id="mode">
+            <option value="read">Read (SELECT)</option>
+            <option value="explain">EXPLAIN</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Results</h3>
+        <pre id="result">No results yet.</pre>
+      </section>
+
+      <section class="panel">
+        <h3>Advice</h3>
+        <pre id="advice">No advice yet.</pre>
+      </section>
+
+      <section class="panel-small">
+        <h4>History</h4>
+        <ul id="history"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <small>SQLForge • Local sandbox • No remote AI • © 2025 Devin B. Royal</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
